@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<div class='task-nav'>
+    <center><h1>Bloc-It-Off</h1></center>
+    <div ng-repeat="task in home.tasks">
+        <ul class="chatrooms">
+            <li>{{ task.$value }}</li>
+        </ul>
+    </div>
+</div>
