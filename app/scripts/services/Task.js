@@ -7,6 +7,10 @@
 
         Task.all = tasks;
 
+        Task.add = function(task) {
+            tasks.$add(task)
+        }
+
         return Task;
     }
 

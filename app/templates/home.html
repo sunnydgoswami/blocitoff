@@ -1,8 +1,9 @@
-<div class='task-nav'>
-    <center><h1>Bloc-It-Off</h1></center>
-    <div ng-repeat="task in home.tasks">
-        <ul class="chatrooms">
-            <li>{{ task.$value }}</li>
-        </ul>
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h1 class="sidebar-title">Bloc-It-Off</h1>
+        <button type="button" class="new-room btn btn-info" ng-click="home.open()">New Task</button>
+    </div>
+    <div class="sidebar-body" ng-repeat="task in task.rooms">
+        <p class="task-name" ng-click="home.storeTaskName(task)">{{ task.$value }}</p>
     </div>
 </div>
