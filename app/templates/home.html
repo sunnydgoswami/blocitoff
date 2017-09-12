@@ -1,9 +1,9 @@
 <div class="sidebar">
     <div class="sidebar-header">
         <h1 class="sidebar-title">Bloc-It-Off</h1>
-        <button type="button" class="new-room btn btn-info" ng-click="home.open()">New Task</button>
+        <button type="button" class="btn btn-info" ng-click="home.openNewTask()">New Task</button>
     </div>
-    <div class="sidebar-body" ng-repeat="task in task.rooms">
-        <p class="task-name" ng-click="home.storeTaskName(task)">{{ task.$value }}</p>
+    <div class="sidebar-body" ng-repeat="task in home.tasks">
+        <a class="task-name" ng-click="home.storeTaskName(task)">{{ task.name }}</a>
     </div>
 </div>

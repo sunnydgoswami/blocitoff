@@ -6,7 +6,7 @@
          };
 
 
-         this.submit = function () {
+         this.createTask = function () {
              Task.add(this.newTask);
              this.newTask = '';
              $uibModalInstance.close();
