@@ -6,23 +6,32 @@
 
       this.totalTasks = function() {
         return this.tasks.length;
-      }
+      };
+
+      this.toggleDone = function(task) {
+        task.done = !task.done;
+        this.tasks.$save(task);
+      };
 
       this.createTask = function() {
         Task.add(this.newTask);
         this.newTask = {name: "" };
-      }
+      };
+
+      this.removeTask = function(task) {
+        this.tasks.$remove(task);
+      };
 
 
 
       this.storeTaskName = function (task) {
         this.currentTask = task;
-      }
+      };
 
       this.isCollapsed = true;
       this.status = {
         isopen: false
-      }
+      };
 
     }
 
