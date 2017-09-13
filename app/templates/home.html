@@ -3,9 +3,10 @@
     <section class='row'>
         <header>
             <h1 class='text-center'>What do you have to do?</h1>
-            <form>
-                <input type="text" class='form-control' ng-model="home.newTask.name" autofocus>
-                <button type="submit" class='form-control' placeholder="What needs to be done?" ng-click="home.createTask()" value="ADD">ADD</button>
+            <form name="enterTask">
+                <input type="text" class='form-control' placeholder="What needs to be done?" ng-model="home.newTask.name" ng-minlength='3' required autofocus>
+                <span ng-show="myform.myfield.$error.required">Please enter something!</span>
+                <button type="submit" class='form-control' ng-click="enterTask.$valid && home.createTask()" value="ADD">ADD</button>
             </form>
         </header>
         <section>
@@ -21,67 +22,6 @@
                         <button class='btn btn-danger pull-right' ng-click="home.removeTask(task)">X</button>
                   </li>
               </ul>
-
-
-            <!-- <div class="list-group">
-                <div ng-repeat="task in home.tasks" class="list-group-item">
-                    <div class="view">
-                        <label>{{task.name}}</label>
-                        <button class='btn btn-danger pull-right' ng-click="removeTodo(todo)">X</button>
-                    </div>
-                </div>
-            </div> -->
         </section>
     </section>
 </div>
-
-
-
-
-
-
-
-
-<!-- <main>
-  <section class="header-container">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <h1>Active Tasks</h1>
-                <button type="button" class="btn btn-info" id="new-task" ng-click="home.openNewTask()">New Task</button>
-      </div>
-  </section>
-
-
-  <section class="container">
-    <div class="col-xs-6 col-md-4">
-        <div ng-repeat="task in home.tasks">
-            <a class="btn btn-basic" id="task-name" ng-click="home.storeTaskName(task)">{{ task.name }}</a>
-        </div>
-    </div>
-  </section>
-
-  <section class="content-container">
-    <div class="col-xs-12 col-md-8" id="task-container">
-        <h1>{{ home.currentTask.name }}</h1>
-    </div>
-  </section>
-</main> -->
-
-
-
-
-
-
-
-<!--
-
-<div class="sidebar">
-    <div class="sidebar-header">
-        <h1 class="sidebar-title">Bloc-It-Off</h1>
-        <button type="button" class="btn btn-info" ng-click="home.openNewTask()">New Task</button>
-    </div>
-    <div class="sidebar-body" ng-repeat="task in home.tasks">
-        <a class="task-name" ng-click="home.storeTaskName(task)">{{ task.name }}</a>
-    </div>
-</div> -->
