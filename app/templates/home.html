@@ -1,3 +1,37 @@
+<main>
+  <section class="header-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1>Active Tasks</h1>
+                <button type="button" class="btn btn-info" id="new-task" ng-click="home.openNewTask()">New Task</button>
+      </div>
+  </section>
+
+
+  <section class="container">
+    <div class="col-xs-6 col-md-4">
+        <div ng-repeat="task in home.tasks">
+            <a class="btn btn-basic" id="task-name" ng-click="home.storeTaskName(task)">{{ task.name }}</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="content-container">
+    <div class="col-xs-12 col-md-8" id="task-container">
+        <h1>{{ home.currentTask.name }}</h1>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+
+
+<!--
+
 <div class="sidebar">
     <div class="sidebar-header">
         <h1 class="sidebar-title">Bloc-It-Off</h1>
@@ -6,4 +40,4 @@
     <div class="sidebar-body" ng-repeat="task in home.tasks">
         <a class="task-name" ng-click="home.storeTaskName(task)">{{ task.name }}</a>
     </div>
-</div>
+</div> -->

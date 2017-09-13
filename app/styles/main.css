@@ -1,0 +1,132 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  font-family: 'Zilla Slab', serif;
+  background-color: gainsboro;
+  min-width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #4a4a4a;
+  height: auto;
+}
+
+#new-task {
+  margin-bottom: 10px;
+  float: right;
+}
+
+#task-name {
+  margin-bottom: 2px;
+}
+
+#task-container {
+  max-height: 500px;
+  width: 85%;
+  margin-left: 135px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  overflow-y: scroll;
+}
+
+.navbar-default {
+  background-color: #26d9d9;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0,0,0,.175);
+  .btn-default {
+    color: #26d9d9;
+    &:hover {
+      background-color: #bdf3f3;
+    }
+  }
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,.175);
+    li>a {
+      &:hover {
+      background-color: #bdf3f3;
+     }
+    }
+  }
+  .navbar-brand {
+    color: #fff;
+    &:hover {
+      color: #000;
+    }
+    &:focus {
+      color: #bdf3f3;
+    }
+  }
+  .navbar-nav>li>a {
+    color: #fff;
+    font-size: medium;
+  }
+  .navbar-nav>.active>a {
+    color: #26d9d9;
+    background-color: #fff;
+  }
+  .navbar-nav>.active>a:focus {
+    color: #26d9d9;
+    background-color: #fff;
+  }
+  .navbar-nav>.active>a:hover {
+    color: #26d9d9;
+    background-color: #bdf3f3;
+  }
+  .navbar-nav>.open>a {
+    color: #26d9d9;
+    background-color: #fff;
+  }
+  .navbar-nav>.open>a:focus {
+    color: #26d9d9;
+    background-color: #fff;
+  }
+  .navbar-nav>.open>a:hover {
+    color: #26d9d9;
+    background-color: #bdf3f3;
+  }
+  .navbar-toggle {
+    border-color: #fff;
+    .icon-bar {
+      background-color: #fff;
+    }
+    &:hover {
+      background-color: #bdf3f3;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    border-radius: 0;
+  }
+  .affix-top,.affix{
+	   position: static;
+   }
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+
+  #sidebar.affix-bottom {
+    position: relative;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+
+}

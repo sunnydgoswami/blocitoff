@@ -16,6 +16,11 @@
         this.currentTask = task;
       }
 
+      this.isCollapsed = true;
+      this.status = {
+        isopen: false
+      }
+
     }
 
     angular
