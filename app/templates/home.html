@@ -1,4 +1,47 @@
-<main>
+
+<div class='container'>
+    <section class='row'>
+        <header>
+            <h1 class='text-center'>What do you have to do?</h1>
+            <form>
+                <input type="text" class='form-control' ng-model="home.newTask.name" autofocus>
+                <button type="submit" class='form-control' placeholder="What needs to be done?" ng-click="home.createTask()" value="ADD">ADD</button>
+            </form>
+        </header>
+        <section>
+            <hr />
+            <big>Total tasks: {{ home.totalTasks() }}</big>
+            <!-- <hr />
+            <p>Double-click to edit a todo</p> -->
+            <hr />
+              <ul>
+                  <li ng-repeat="task in home.tasks">
+                      <input type="checkbox">
+                        <span> {{ task.name }}</span>
+                  </li>
+              </ul>
+
+
+            <!-- <div class="list-group">
+                <div ng-repeat="task in home.tasks" class="list-group-item">
+                    <div class="view">
+                        <label>{{task.name}}</label>
+                        <button class='btn btn-danger pull-right' ng-click="removeTodo(todo)">X</button>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+<!-- <main>
   <section class="header-container">
       <div class="container">
         <div class="row">
@@ -22,7 +65,7 @@
         <h1>{{ home.currentTask.name }}</h1>
     </div>
   </section>
-</main>
+</main> -->
 
 
 
