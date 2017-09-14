@@ -17,11 +17,18 @@
             <hr />
               <ul>
                   <li class="list-group-item" ng-repeat="task in home.tasks">
-                      <input type="checkbox" ng-click='home.toggleDone(task)' ng-checked='home.task.done'>
+                      <input type="checkbox" ng-click='home.toggleDone(task)' ng-checked='home.task.done === false'>
                         <span> {{ task.name }}</span>
                         <button class='btn btn-danger pull-right' ng-click="home.removeTask(task)">X</button>
                   </li>
               </ul>
+              list of done
+                ng-repeat (or ng-repeat a filtered list with just .done == true)
+                ng-show=todo.done / ng-hide=true
+              list of not done w/ opposite logic
+
+
+
         </section>
     </section>
 </div>

@@ -11,7 +11,17 @@
                 url: '/',
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
-            });
+            })
+            .state('completed', {
+                url: '/completed',
+                controller: "CompletedCtrl as completed",
+                templateUrl: "/templates/completed.html"
+            })
+            .state('destructed', {
+                url: '/destructed',
+                controller: "DestrutedCtrl as destructed",
+                templateUrl: "/templates/destructed.html"
+            })
     }
 
     angular
