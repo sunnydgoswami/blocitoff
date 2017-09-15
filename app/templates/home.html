@@ -16,9 +16,9 @@
             <p>Double-click to edit a todo</p> -->
             <hr />
               <ul>
-                  <li class="list-group-item" ng-repeat="task in home.tasks">
-                      <input type="checkbox" ng-click='home.toggleDone(task)' ng-checked='home.task.done === false'>
-                        <span> {{ task.name }}</span>
+                  <li class="list-group-item" ng-repeat="task in home.tasks | filter:done==false">
+                      <input type="checkbox" ng-model="checked" ng-click='home.toggleDone(task)'>
+                        <span>{{ task.name.name }}</span>
                         <button class='btn btn-danger pull-right' ng-click="home.removeTask(task)">X</button>
                   </li>
               </ul>

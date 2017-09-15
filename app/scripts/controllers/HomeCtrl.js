@@ -14,7 +14,10 @@
       };
 
       this.createTask = function() {
-        Task.add(this.newTask);
+        Task.add({
+          name: this.newTask,
+          done: false
+        });
         this.newTask = {name: "" };
       };
 
