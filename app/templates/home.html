@@ -12,8 +12,8 @@
         <section>
             <hr />
             <center><big>Total tasks: {{ home.totalTasks() }}</big></center>
-            <!-- <hr />
-            <p>Double-click to edit a todo</p> -->
+            <!-- <br />
+            <center><big>Completed: {{ home.totalCompleted() }}</big></center> -->
             <hr />
               <ul>
                   <li class="list-group-item" ng-repeat="task in home.tasks | filter:done==false">
@@ -22,13 +22,6 @@
                         <button class='btn btn-danger pull-right' ng-click="home.removeTask(task)">X</button>
                   </li>
               </ul>
-              list of done
-                ng-repeat (or ng-repeat a filtered list with just .done == true)
-                ng-show=todo.done / ng-hide=true
-              list of not done w/ opposite logic
-
-
-
         </section>
     </section>
 </div>
