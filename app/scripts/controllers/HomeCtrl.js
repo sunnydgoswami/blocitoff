@@ -10,9 +10,10 @@
       this.toggleDone = function(task) {
         task.done = !task.done;
         this.tasks.$save(task);
-        //how do I send it to the completed screen upon checking checkbox?
       };
 
+
+//change to seven days after testing
       this.expireTask = function(task) {
         var days = 24 * 60 * 60 * 1000
         if (task.done == false && (Date.now() - task.startedAt) >= (60 * 1000)) {
@@ -22,10 +23,14 @@
       };
 
 //come back to later it is not access done value
-      // this.totalCompleted = function() {
-      //   return _.filter(this.tasks, function(task) {
-      //     return this.task.done == true;
-      //   }).length;;
+      // this.totalCompleted = function(task) {
+      //   var completed = [];
+      //   if (this.tasks.done == true) {
+      //     return completed.length;
+      //   };
+      //   // return  {
+      //   //   return this.task.done == true;
+      //   // }).length;;
       // };
 
       this.createTask = function() {

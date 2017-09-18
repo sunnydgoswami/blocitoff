@@ -3,7 +3,7 @@
     <div ng-repeat="task in completed.tasks">
       <ul class="list-group">
         <li class="list-group-item" ng-show="task.done == true">
-          {{task.name.name}}
+          <span>{{task.name.name}}</span>
           <button class="button completed pull-right">✔</button>
         </li>
       </ul>
