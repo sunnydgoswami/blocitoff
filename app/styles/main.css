@@ -53,7 +53,9 @@ body {
   padding-top: 5px;
   overflow-y: scroll;
 }*/
-
+.active {
+  color: blue;
+}
 .navbar-default {
   background-color: #26d9d9;
   border: none;
@@ -64,6 +66,7 @@ body {
       background-color: #bdf3f3;
     }
   }
+}
   .dropdown-menu {
     border: none;
     box-shadow: 0 1px 1px rgba(0,0,0,.175);
@@ -86,10 +89,12 @@ body {
     color: #fff;
     font-size: medium;
   }
-  .navbar-nav>.active>a {
+  .navbar-nav .active a {
     color: #26d9d9;
     background-color: #fff;
   }
+
+
   .navbar-nav>.active>a:focus {
     color: #26d9d9;
     background-color: #fff;

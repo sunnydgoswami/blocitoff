@@ -8,7 +8,7 @@
       };
 
       this.toggleDone = function(task) {
-        task.done = !task.done;
+        task.done = !this.done; //change the names up
         this.tasks.$save(task);
       };
 
@@ -16,27 +16,27 @@
 //change to seven days after testing
       this.expireTask = function(task) {
         var days = 24 * 60 * 60 * 1000
-        if (task.done == false && (Date.now() - task.startedAt) >= (60 * 1000)) {
+        if (task.done == false && (Date.now() - task.startedAt) >= (7 * days)) {
           task.done = "expired";
           this.tasks.$save(task);
         };
       };
 
 //come back to later it is not access done value
-      // this.totalCompleted = function(task) {
-      //   var completed = [];
-      //   if (this.tasks.done == true) {
-      //     return completed.length;
-      //   };
-      //   // return  {
-      //   //   return this.task.done == true;
-      //   // }).length;;
-      // };
+      this.totalCompleted = function(task) {
+        var completed = [];
+        if (this.tasks.done == true) {
+          return completed.length;
+        };
+        // return  {
+        //   return this.task.done == true;
+        // }).length;;
+      };
 
       this.createTask = function() {
         Task.add({
           name: this.newTask,
-          done: false,
+          done: false, //status instead of done or soemthing
           startedAt: Date.now()
         });
         this.newTask = {name: "" };

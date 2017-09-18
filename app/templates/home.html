@@ -3,7 +3,7 @@
     <section class='row'>
         <header>
             <h1 class='text-center'>What do you have to do?</h1>
-            <form name="enterTask">
+            <form name="enterTask" novalidate>
                 <input type="text" class='form-control' placeholder="What needs to be done?" ng-model="home.newTask.name" ng-minlength='3' required autofocus>
                 <span ng-show="myform.myfield.$error.required">Please enter something!</span>
                 <button type="submit" class='form-control' ng-click="enterTask.$valid && home.createTask()" value="ADD">ADD</button>
@@ -12,8 +12,8 @@
         <section>
             <hr />
             <center><big>Total tasks: {{ home.totalTasks() }}</big></center>
-            <!-- <br />
-            <center><big>Completed: {{ home.totalCompleted() }}</big></center> -->
+            <br />
+            <center><big>Completed: {{ home.totalCompleted() }}</big></center>
             <hr />
               <ul>
                   <li class="list-group-item" ng-repeat="task in home.tasks" ng-show="task.done == false" ng-init="home.expireTask(task)">
@@ -25,3 +25,8 @@
         </section>
     </section>
 </div>
+
+<!-- true/false/expired
+"active", "inactive", "expired"
+0 = active, 1 = inactive, 9 = expired
+ACTIVE = 0 -->
