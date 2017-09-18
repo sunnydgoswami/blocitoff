@@ -15,9 +15,11 @@
             <br />
             <center><big>Completed: {{ home.totalCompleted() }}</big></center>
             <hr />
-            <center><big><ul>
-                <li>***If you made a mistake hits the OOPS button and your task will be moved to the Destructed view.***</li>
-            </ul></big></center>
+            <ol>
+                <li>Check the checkbox to move to Completed View.</li>
+                <li>If a task is on the list for more than 7 days it will be moved to the Destructed View.</li>
+                <li>If you made a mistake hits the ***OOPS*** button and your task will be moved to the Destructed View.</li>
+            </ol>
             <hr />
               <ul class="list-group">
                   <li class="list-group-item" ng-repeat="task in home.tasks" ng-show="task.done == false" ng-init="home.expireTask(task)">
