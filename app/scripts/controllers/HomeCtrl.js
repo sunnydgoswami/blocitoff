@@ -14,9 +14,11 @@
       };
 
       this.expireTask = function(task) {
-        if (task.startedAt < Date.now() - 604800000) {
-          return true;
-        }
+        var days = 24 * 60 * 60 * 1000
+        if (task.done == false && (Date.now() - task.startedAt) >= (60 * 1000)) {
+          task.done = "expired";
+          this.tasks.$save(task);
+        };
       };
 
 //come back to later it is not access done value

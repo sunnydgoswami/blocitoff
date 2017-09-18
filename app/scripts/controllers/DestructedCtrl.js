@@ -1,8 +1,9 @@
 (function() {
-    function DestructedCtrl() {
+    function DestructedCtrl(Task) {
+      this.tasks - Task.all
     }
 
     angular
         .module('blocitOff')
-        .controller('DestructedCtrl', [DestructedCtrl]);
+        .controller('DestructedCtrl', ['Task', DestructedCtrl]);
 })();

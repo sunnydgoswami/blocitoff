@@ -19,7 +19,7 @@
             })
             .state('destructed', {
                 url: '/destructed',
-                controller: "DestrutedCtrl as destructed",
+                controller: "DestructedCtrl as destructed",
                 templateUrl: "/templates/destructed.html"
             })
     }
