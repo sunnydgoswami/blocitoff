@@ -1,1 +1,11 @@
-<h1>Hello World!</h1>
+<div>
+  <h1>Completed Task</h1>
+    <div ng-repeat="task in completed.tasks">
+      <ul class="list-group">
+        <li class="list-group-item" ng-show="task.done == true">
+          {{task.name.name}}
+          <button class="button completed pull-right">✔</button>
+        </li>
+      </ul>
+    </div>
+</div>

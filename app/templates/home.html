@@ -16,9 +16,9 @@
             <center><big>Completed: {{ home.totalCompleted() }}</big></center> -->
             <hr />
               <ul>
-                  <li class="list-group-item" ng-repeat="task in home.tasks | filter:done==false">
-                      <input type="checkbox" ng-model="checked" ng-click='home.toggleDone(task)'>
-                        <span>{{ task.name.name }}</span>
+                  <li class="list-group-item" ng-repeat="task in home.tasks" ng-show="task.done == false">
+                      <input type="checkbox" ng-click='home.toggleDone(task)'>
+                        {{ task.name.name }}
                         <button class='btn btn-danger pull-right' ng-click="home.removeTask(task)">X</button>
                   </li>
               </ul>
