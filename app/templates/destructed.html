@@ -2,7 +2,7 @@
   <h1>Expired Tasks</h1>
     <div ng-repeat="task in destructed.tasks">
       <ul class="list-group">
-        <li class="list-group-item" ng-show="task.done == "expired"">
+        <li class="list-group-item" ng-show="task.done == 'expired'">
           {{task.name.name}}
         </li>
       </ul>

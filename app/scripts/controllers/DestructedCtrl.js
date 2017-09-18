@@ -1,6 +1,6 @@
 (function() {
     function DestructedCtrl(Task) {
-      this.tasks - Task.all
+      this.tasks = Task.all;
     }
 
     angular
