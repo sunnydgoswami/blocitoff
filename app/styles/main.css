@@ -18,66 +18,31 @@ body {
   height: auto;
 }
 
-.editing {
-    border-bottom: none;
-    padding: 0;
-}
-.editing .edit {
-    display: block;
-    width: 506px;
-    padding: 13px 17px 12px 17px;
-    margin: 0 0 0 43px;
-}
-.editing .view {
-    display: none;
-}
-.editing:last-child {
-    margin-bottom: -1px;
+ul {
+  list-style: none;
 }
 
-
-/*#new-task {
-  margin-bottom: 10px;
-  float: right;
+.btn {
+  padding: 3px 6px;
 }
 
-#task-name {
-  margin-bottom: 2px;
+.task-name {
+  padding-left: 5px;
+  text-align: center;
 }
 
-#task-container {
-  max-height: 500px;
-  width: 85%;
-  margin-left: 135px;
-  margin-bottom: 10px;
-  padding-top: 5px;
-  overflow-y: scroll;
-}*/
-.active {
-  color: blue;
-}
-.navbar-default {
-  background-color: #26d9d9;
+.dropdown-menu {
   border: none;
   box-shadow: 0 1px 1px rgba(0,0,0,.175);
-  .btn-default {
-    color: #26d9d9;
+  li>a {
     &:hover {
       background-color: #bdf3f3;
     }
   }
 }
-  .dropdown-menu {
-    border: none;
-    box-shadow: 0 1px 1px rgba(0,0,0,.175);
-    li>a {
-      &:hover {
-      background-color: #bdf3f3;
-     }
-    }
-  }
-  .navbar-brand {
-    color: #fff;
+  .navbar-inverse .navbar-brand {
+    color: #26d9d9;
+    font-size: large;
     &:hover {
       color: #000;
     }
@@ -85,8 +50,7 @@ body {
       color: #bdf3f3;
     }
   }
-  .navbar-nav>li>a {
-    color: #fff;
+.navbar-inverse .navbar-nav>li>a {
     font-size: medium;
   }
   .navbar-nav .active a {
@@ -124,7 +88,6 @@ body {
       background-color: #bdf3f3;
     }
   }
-}
 
 @media screen and (min-width: 768px) {
   .navbar {

@@ -22,16 +22,19 @@
         };
       };
 
-//come back to later it is not access done value
-      this.totalCompleted = function(task) {
-        var completed = [];
-        if (this.tasks.done == true) {
-          return completed.length;
-        };
-        // return  {
-        //   return this.task.done == true;
-        // }).length;;
-      };
+// //come back to later it is not access done value
+//       this.totalCompleted = function() {
+//         var completed = [];
+//         console.log(this.tasks)
+//         // push an array if task is done then .lngth
+//         //loop through all tasks
+//         if (this.task.done == true) {
+//           return completed.length;
+//         };
+//         // return  {
+//         //   return this.task.done == true;
+//         // }).length;;
+//       };
 
       this.createTask = function() {
         Task.add({
@@ -42,13 +45,12 @@
         this.newTask = {name: "" };
       };
 
-      this.removeTask = function(task) {
-        //how doo i move from this database/view to another upon removal
-        // task.done = !task.done
-        this.tasks.$remove(task);
+      this.moveTaskToExpired = function(task) {
+        if (task.done == false) {
+          task.done = 'expired';
+          this.tasks.$save(task);
+        };
       };
-
-
 
       this.storeTaskName = function (task) {
         this.currentTask = task;

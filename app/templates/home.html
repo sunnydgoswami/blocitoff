@@ -15,13 +15,18 @@
             <br />
             <center><big>Completed: {{ home.totalCompleted() }}</big></center>
             <hr />
-              <ul>
+            <center><big><ul>
+                <li>***If you made a mistake hits the OOPS button and your task will be moved to the Destructed view.***</li>
+            </ul></big></center>
+            <hr />
+              <ul class="list-group">
                   <li class="list-group-item" ng-repeat="task in home.tasks" ng-show="task.done == false" ng-init="home.expireTask(task)">
                       <input type="checkbox" ng-click='home.toggleDone(task)'>
-                        {{ task.name.name }}
-                        <button class='btn btn-danger pull-right' ng-click="home.removeTask(task)">X</button>
+                        <span class="task-name">{{ task.name.name }}</span>
+                        <button class='btn btn-group btn-danger pull-right' ng-click="home.moveTaskToExpired(task)">OOPS</button>
                   </li>
               </ul>
+             <hr />
         </section>
     </section>
 </div>
