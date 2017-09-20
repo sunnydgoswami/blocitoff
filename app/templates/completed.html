@@ -6,7 +6,7 @@
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="task in completed.tasks" ng-show="task.done == true">
           <span class="task-name">{{ task.name.name }}</span>
-          <button class="button completed pull-right" ng-click="completed.moveTaskToExpired(task)">✔</button>
+          <button class="button btn-success completed pull-right" ng-click="completed.moveTaskToExpired(task)">✔</button>
     </li>
   </ul>
   <hr />

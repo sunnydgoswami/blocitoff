@@ -6,6 +6,12 @@
             <form name="enterTask" novalidate>
                 <input type="text" class='form-control' placeholder="What needs to be done?" ng-model="home.newTask.name" ng-minlength='3' required autofocus>
                 <span ng-show="myform.myfield.$error.required">Please enter something!</span>
+                <!-- <select class="form-control" ng-model="workTask.priority">
+                  <option value="" disabled="disabled">Priority</option>
+                  <option id="urgent-option" value="urgent">Urgent</option>
+                  <option id="important-option" value="important">Important</option>
+                  <option id="regular-option" value="regular">Regular</option>
+                </select> -->
                 <button type="submit" class='form-control' ng-click="enterTask.$valid && home.createTask()" value="ADD">ADD</button>
             </form>
         </header>
@@ -13,7 +19,9 @@
             <hr />
             <center><big>Total tasks: {{ home.totalTasks() }}</big></center>
             <br />
-            <center><big>Completed: {{ home.totalCompleted() }}</big></center>
+            <center><big>Completed Task: {{ home.totalCompleted() }}</big></center>
+            <br />
+            <center><big>Remaing Task: {{ home.remaining() }}</big></center>
             <hr />
             <ol>
                 <li>Check the checkbox to move to Completed View.</li>
@@ -25,7 +33,7 @@
                   <li class="list-group-item" ng-repeat="task in home.tasks" ng-show="task.done == false" ng-init="home.expireTask(task)">
                       <input type="checkbox" ng-click='home.toggleDone(task)'>
                         <span class="task-name">{{ task.name.name }}</span>
-                        <button class='btn btn-group btn-danger pull-right' ng-click="home.moveTaskToExpired(task)">OOPS</button>
+                        <button class='btn btn-group btn-warning pull-right' ng-click="home.moveTaskToExpired(task)">OOPS</button>
                   </li>
               </ul>
              <hr />
